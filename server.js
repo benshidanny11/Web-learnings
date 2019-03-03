@@ -1,4 +1,5 @@
 const express=require('express');
+const port=process.env.PORT||3799; 
 var app=express();
 const fs=require('fs');
 
@@ -34,6 +35,6 @@ return new Date().getFullYear();
 });
 
 
-app.listen(3799,()=>{
-	console.log('Server is running on port 3799');
+app.listen(port,()=>{
+	console.log(`Server is running on port ${port}`);
 });
